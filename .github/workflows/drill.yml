@@ -1,0 +1,12 @@
+name: CI Drill
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  stuck-build-sim:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate stuck build (sleep 600s >= 10 min)
+        run: sleep 600
